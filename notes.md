@@ -82,7 +82,7 @@ def __str__(self):
 ```
 
 15- Configure static files path and urls
-```python
+```
 STATIC_URL = '/static/'
 MEDIA_URL = '/media/'
 

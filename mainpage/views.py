@@ -1,21 +1,34 @@
 from django.shortcuts import render
+from .models import Home, About, Profile, Category, Skills, Portfolio
 
-# Create your views here.
+def index(request):
 
-from django.shortcuts import render
-from .models import HomeSection, AboutSection, SkillCategory, PortfolioItem
+    # Home
+    home = Home.objects.latest('updated')
 
-def home(request):
-    home_section = HomeSection.objects.first()
-    about_section = AboutSection.objects.first()
-    skill_categories = SkillCategory.objects.all()
-    portfolio_items = PortfolioItem.objects.all()
+    # About
+    about = About.objects.first()
+    profiles = Profile.objects.first()
+
+    # Skills
+    categories = Category.objects.all()
+
+    # Portfolio
+    portfolios = Portfolio.objects.all()
     
+    #  home_section = HomeSection.objects.first()
+    #  about_section = AboutSection.objects.first()
+    #  skill_categories = SkillCategory.objects.all()
+    #  portfolio_items = PortfolioItem.objects.all()
+    
+
     context = {
-        'home_section': home_section,
-        'about_section': about_section,
-        'skill_categories': skill_categories,
-        'portfolio_items': portfolio_items,
+        'home': home,
+        'about': about,
+        'profiles': profiles,
+        'categories': categories,
+        'portfolios': portfolios
     }
-    
-    return render(request, 'yourapp/home.html', context)
+
+
+    return render(request, 'index.html', context)
