@@ -35,6 +35,8 @@ git clone https://github.com/itzomen/porto.git
 mkvirtualenv --python=/usr/bin/python3.8 venv
 ```
 
+ls and cs into the folder of your django project
+
 -> Install all requirements using
 ``` bash
 pip install -r requirements.txt
