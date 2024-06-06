@@ -15,14 +15,8 @@ def index(request):
 
     # Portfolio
     portfolios = Portfolio.objects.all()
-    
-    #  home_section = HomeSection.objects.first()
-    #  about_section = AboutSection.objects.first()
-    #  skill_categories = SkillCategory.objects.all()
-    #  portfolio_items = PortfolioItem.objects.all()
-    
 
-    context = {
+    eachsection = {
         'home': home,
         'about': about,
         'profiles': profiles,
@@ -31,4 +25,4 @@ def index(request):
     }
 
 
-    return render(request, 'index.html', context)
+    return render(request, 'index.html', eachsection)

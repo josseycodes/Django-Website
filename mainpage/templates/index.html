@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
     <html lang="en">
     <head>
@@ -5,19 +6,19 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- ===== CSS ===== -->
-        <link rel="stylesheet" href="assets/css/styles.css">
+        <link rel="stylesheet" href="{% static 'assets/css/styles.css' %}">
 
         <!-- ===== BOX ICONS ===== -->
         <link href='https://cdn.jsdelivr.net/npm/boxicons@2.0.5/css/boxicons.min.css' rel='stylesheet'>
 
-        <title>Tech Portfolio Website</title>
+        <title>Portfoliosite</title>
     </head>
     <body>
         <!--===== HEADER =====-->
         <header class="l-header">
             <nav class="nav bd-grid">
                 <div>
-                    <a href="#" class="nav__logo">Adewumi Josephine Adedoyinsola</a>
+                    <a href="#" class="nav__logo">{{home.name}}</a>
                 </div>
 
                 <div class="nav__menu" id="nav-menu">
@@ -40,13 +41,13 @@
             <!--===== HOME =====-->
             <section class="home" id="home">
                 <div class="home__container bd-grid">
-                    <h1 class="home__title"><span>WEL</span><br>COME</h1>
+                    <h1 class="home__title"><span>{{home.greetings_1}}</span><br>{{home.greetings_2}}</h1>
 
                     <div class="home__scroll">
                         <a href="#about" class="home__scroll-link"><i class='bx bx-up-arrow-alt' ></i>Keep Scrolling</a>
                     </div>
 
-                    <img src="assets/img/bestpic-removebg-preview.png" alt="" class="home__img">
+                    <img src="{{home.picture.url}}" alt="" class="home__img">
                 </div>
             </section>
             
@@ -56,13 +57,13 @@
 
                 <div class="about__container bd-grid">
                     <div class="skills__img">
-                        <img src="assets/img/bestpic-removebg-preview.png" alt="">
+                        <img src="{{home.picture.url}}" alt="">
                     </div>
 
                     <div>
-                        <h2 class="about__subtitle">I am Josephine</h2>
-                        <span class="about__profession">Website designer</span>
-                        <p class="about__text">I am a website designer who makes stylish and useful websites. I use HTML to build the site's structure and React to create interactive parts. I use Tailwind and Bootstrap to design nice, responsive layouts quickly, and Python Django to create strong backends for my projects. By combining these tools, I create high-quality, user-friendly websites. I pay close attention to details to ensure my designs look good and work well. My work shows both creativity and technical skill, making sure my clients are happy with their websites.</p>
+                        <h2 class="about__subtitle">{{about.heading}}</h2>
+                        <span class="about__profession">{{about.career}}</span>
+                        <p class="about__text">{{about.description}}</p>
 
                         <div class="about__social">
                             <a href="#" class="about__social-icon"><i class='bx bxl-linkedin' ></i></a>
@@ -102,7 +103,7 @@
                     </div>
 
                     <div class="skills__img">
-                        <img src="assets/img/bestpic-removebg-preview.png" alt="">
+                        <img src="{% static 'assets/img/bestpic-removebg-preview.png' %}" alt="">
                     </div>
                 </div>
             </section>
@@ -113,7 +114,7 @@
 
                 <div class="portfolio__container bd-grid">
                     <div class="portfolio__img">
-                        <img src="assets/img/website1.jpg" alt="">
+                        <img src="{% static 'assets/img/website1.jpg' %}" alt="">
 
                         <div class="portfolio__link">
                             <a href="#" class="portfolio__link-name">View details</a>
@@ -122,7 +123,7 @@
 
 
                     <div class="portfolio__img">
-                        <img src="assets/img/website2.jpg" alt="">
+                        <img src="{% static 'assets/img/website2.jpg' %}" alt="">
 
                         <div class="portfolio__link">
                             <a href="#" class="portfolio__link-name">View details</a>
@@ -131,7 +132,7 @@
 
 
                     <div class="portfolio__img">
-                        <img src="assets/img/website3.jpg" alt="">
+                        <img src="{% static 'assets/img/website3.jpg' %}" alt="">
 
                         <div class="portfolio__link">
                             <a href="#" class="portfolio__link-name">View details</a>
@@ -140,7 +141,7 @@
 
                     
                     <div class="portfolio__img">
-                        <img src="assets/img/website4.avif" alt="">
+                        <img src="{% static 'assets/img/website4.avif' %}" alt="">
 
                         <div class="portfolio__link">
                             <a href="#" class="portfolio__link-name">View details</a>
@@ -149,7 +150,7 @@
 
 
                     <div class="portfolio__img">
-                        <img src="assets/img/website5.jpg" alt="">
+                        <img src="{% static 'assets/img/website5.jpg' %}" alt="">
 
                         <div class="portfolio__link">
                             <a href="#" class="portfolio__link-name">View details</a>
@@ -158,7 +159,7 @@
 
 
                     <div class="portfolio__img">
-                        <img src="assets/img/website6.jpg" alt="">
+                        <img src="{% static 'assets/img/website6.jpg' %}" alt="">
 
                         <div class="portfolio__link">
                             <a href="#" class="portfolio__link-name">View details</a>

@@ -3,7 +3,7 @@ from django.db import models
 # HOME SECTION
 
 class Home(models.Model):
-    name = models.CharField(max_length=20)
+    name = models.CharField(max_length=50)
     greetings_1 = models.CharField(max_length=5)
     greetings_2 = models.CharField(max_length=5)
     picture = models.ImageField(upload_to='picture/')
