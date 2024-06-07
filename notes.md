@@ -36,7 +36,7 @@ it is important that you add that . after the name of the project.
 8- Check project
 `python manage.py runserver`
 
-9- Create an app
+9- Create an app.
 `python manage.py startapp nameofapp`
 
 10- Add app to settings
